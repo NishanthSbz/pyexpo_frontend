@@ -1,1 +1,1 @@
-# pyexpo_frontend
+# pyexpo_frontend repo is ready to rock
