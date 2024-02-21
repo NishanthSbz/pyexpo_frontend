@@ -144,3 +144,16 @@ const init = () => {
 };
 
 document.addEventListener('DOMContentLoaded', init);
+
+//menu toggle symcol
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', function () {
+    const icon = navbarToggler.querySelector('.lni-menu');
+    if (icon.classList.contains('open')) {
+      icon.classList.remove('open');
+    } else {
+      icon.classList.add('open');
+    }
+  });
+});

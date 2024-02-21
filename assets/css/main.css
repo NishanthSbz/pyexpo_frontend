@@ -2954,3 +2954,12 @@ li.stylish-list {
 .prize-desc {
   display: none;
 }
+.lni-menu:before {
+  content: '\2630';
+  /* Unicode for three horizontal lines (☰) */
+}
+
+.lni-menu.open:before {
+  content: '\00D7';
+  /* Unicode for close symbol (×) */
+}
