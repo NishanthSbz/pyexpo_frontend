@@ -95,7 +95,7 @@
 }(jQuery));
 
  // Set the date to count down to (format: month day, year, hour:minute:second)
- var countDownDate = new Date('Mar 1, 2024 00:00:00').getTime()
+ var countDownDate = new Date('Mar 6, 2024 00:00:00').getTime()
             
  // Update the timer every second
  var x = setInterval(function () {
@@ -127,4 +127,20 @@
   
 }
 
- 
+// Accordion schedule area
+const accordionItem = document.querySelectorAll('.accordion-item');
+                             
+const onClickAccordionHeader = e => {
+  if (e.currentTarget.parentNode.classList.contains('active')) {
+    e.currentTarget.parentNode.classList.remove("active");
+  } else {
+    Array.prototype.forEach.call(accordionItem, e => e.classList.remove('active'));
+    e.currentTarget.parentNode.classList.add("active");
+  }
+};
+
+const init = () => {
+  Array.prototype.forEach.call(accordionItem, e => e.querySelector('.accordion-header').addEventListener('click', onClickAccordionHeader, false));
+};
+
+document.addEventListener('DOMContentLoaded', init);

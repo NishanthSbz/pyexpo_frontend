@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #292929; /* color of the tracking area */
+  background: #ffffff; /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -16,7 +16,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 15px; /* roundness of the scroll thumb */
 }
 
-/* #0000ff */
+/* #fff0ff */
 body {
   background: #0f121a;
   font-size: 15px;
@@ -1239,12 +1239,114 @@ h1 {
 /* Schedule Area */
 #schedules {
   background: #f3f4f3;
+  justify-content: center;
 }
 
 #schedule-tab {
   position: relative;
 }
 
+.accordion {
+  max-width: 550px;
+  display: inline;
+}
+.accordion-item {
+  background-color: transparent;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in 0.3s;
+}
+.accordion-item.active {
+  background-color: white;
+  transition: background-color 0.2s ease-in 0s;
+}
+.accordion-item.active .accordion-header {
+  color: black;
+  background-color: white;
+  transition: background-color 0.2s ease-in 0s, color 0.2s ease-in 0.2s;
+}
+.accordion-item.active .accordion-header h2:before, .accordion-item.active .accordion-header h2:after {
+  background-color: black;
+  transition: background-color 0.2s ease-in 0.2s, transform 0.2s ease 0.1s;
+}
+.accordion-item.active .accordion-header h2:before {
+  display: none;
+}
+.accordion-item.active .accordion-header h2:after {
+  transform: rotate(90deg);
+}
+.accordion-item.active .accordion-body {
+  max-height: 900px;
+  padding: 0 15px 15px;
+  transition: max-height 0.3s ease-in 0s, padding 0.2s ease-in 0s;
+}
+.accordion-item.active .accordion-body p {
+  opacity: 1;
+  transition: opacity 0.2s ease-in 0.2s;
+  color: black;
+}
+.accordion-header {
+  color: white;
+  background-color: #566cd7;
+  border-radius: 5px;
+  padding: 25px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out 0.3s, color 0.2s ease-out 0s;
+}
+.accordion-header h2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  margin: 0;
+}
+.accordion-header h2:before, .accordion-header h2:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  transition: background-color 0.2s ease-in 0s, transform 0.2s ease 0s;
+}
+.accordion-header h2:before {
+  width: 10px;
+  height: 2px;
+  right: 0;
+  top: calc(50% - 1px);
+}
+.accordion-header h2:after {
+  width: 2px;
+  height: 10px;
+  right: 4px;
+  top: calc(50% - 5px);
+  transform: none;
+}
+.accordion-body {
+  max-height: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out 0s, padding 0.1s ease-out 0.2s;
+}
+.accordion-body p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0;
+  margin: 0;
+  transition: opacity 0.2s ease-in 0s;
+}
+
+.credits {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
+}
+.credits p {
+  color: #94a2e6;
+  margin: 0;
+}
+.credits a {
+  color: white;
+}
 .schedule .nav-tabs {
   display: grid;
   border-bottom: none;
