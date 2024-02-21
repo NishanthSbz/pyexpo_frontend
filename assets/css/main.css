@@ -744,6 +744,7 @@ a.back-to-top:focus {
 
 .navbar {
   padding: 0;
+  background-color: #0000006e;
 }
 
 .navbar li.active a.nav-link {
@@ -2588,7 +2589,7 @@ footer {
 ========================================================================== */
 .hero-area-bg {
   /* background: url(../img/hero-area.jpg) no-repeat; */
-  background: url(../img/background/pyexpo_landingpg5.png ) no-repeat center center /*fixed*/;
+  background: url(../img/background/pyexpo_landingpg9.png ) no-repeat center center /*fixed*/;
   background-size: cover;
   background-position: center center;
   height: 110vh;
@@ -2611,9 +2612,9 @@ footer {
 }
 
 img#nav-logo {
-  width: 120px;
+  width: 82px;
   height: auto;
-  padding-top: 5px;
+  padding: 3px;
 }
 
 #hero-area .contents {
@@ -2635,10 +2636,10 @@ img#nav-logo {
 #hero-area .contents .banner-info {
   font-size: 18px;
   font-style: italic;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   line-height: 24px;
   color: #fff;
-  margin-top: 25px;
+  margin-top: 37px;
 }
 #hero-area .contents .banner-btn {
   margin-top: 35vh;
@@ -2671,7 +2672,7 @@ img#nav-logo {
 
  /* Style the timer text */
  #timer {
-   font-size: 70px;
+   font-size: 65px;
    color: #2b72ad;
    text-shadow: -1px 0 #000, 0 1px #fff, 1px 0 #fff, 0 -1px #000;
    margin: 0 0 0 20px;   
@@ -2679,7 +2680,8 @@ img#nav-logo {
    font-variant-caps:small-caps;
     font-weight:500;
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    padding: 10px; 
  }
  
 
@@ -2740,13 +2742,13 @@ div#clock {
 @media (max-width: 798px) {
   .hero-area-bg {
     /* background: url(../img/hero-area.jpg) no-repeat; */
-    background: url(../img/background/onlybg2.png) no-repeat !important;
+    background: url(../img/background/onlybg6.png) no-repeat !important;
     background-size: cover !important;
     background-position: center;
     height: 100vh;
   }
   #timer {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
     }
 
@@ -2762,15 +2764,17 @@ div#clock {
 @media (max-width: 415px) {
   .hero-area-bg {
     /* background: url(../img/hero-area.jpg) no-repeat; */
-    background: url(../img/background/onlybg.png) no-repeat !important;
+    background: url(../img/background/onlybg6.png) no-repeat !important;
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
   
-
-  #hero-register {
+  #timer{
+    font-size: 18px;
+    padding-right: 15px;
   }
+
   #hero-image {
     display: block;
   }
@@ -2780,7 +2784,7 @@ div#clock {
 }
 @media (max-width: 768px) {
   #count .count-wrapper {
-    margin-top: 100px;
+    margin-top: 72px;
     top: -200px;
     z-index: 0;
     color: white;
