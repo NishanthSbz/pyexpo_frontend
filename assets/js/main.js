@@ -143,17 +143,20 @@ const init = () => {
   Array.prototype.forEach.call(accordionItem, e => e.querySelector('.accordion-header').addEventListener('click', onClickAccordionHeader, false));
 };
 
-document.addEventListener('DOMContentLoaded', init);
 
-//menu toggle symcol
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  navbarToggler.addEventListener('click', function () {
-    const icon = navbarToggler.querySelector('.lni-menu');
-    if (icon.classList.contains('open')) {
-      icon.classList.remove('open');
-    } else {
-      icon.classList.add('open');
-    }
-  });
+document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.addEventListener('click', function() {
+        const icon = navbarToggler.querySelector('.lni-menu');
+        icon.classList.toggle('open');
+    });
+
+    // Update the menu symbol when a menu item is clicked
+    const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+    menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const icon = navbarToggler.querySelector('.lni-menu');
+            icon.classList.remove('open');
+        });
+    });
 });

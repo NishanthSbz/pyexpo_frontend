@@ -1213,13 +1213,14 @@ h1 {
 /* Sponsors Area */
 #sponsors {
   /* background: url(https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_960_720.jpg) no-repeat center; */
-  background-color: #fff;
+  background-color: #ffffff;
   background-attachment: scroll;
   background-size: auto auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  min-height: 60vh;
 }
 
 #sponsors .section-title-header .section-title {
@@ -1238,7 +1239,146 @@ h1 {
   border-color: transparent;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
 }
+.sponsors-row {
+  display: flex;
+  justify-content: space-between; /* Evenly spaced */
+  align-items: center;
+}
 
+.sponsors-logo {
+  max-width: 100%; /* Ensure images don't exceed their container */
+}
+
+.sponsors-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.sponsor-divider {
+  display: none; /* Initially hide the divider */
+}
+
+/* Adjustments for Medium Desktop Screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sponsors-row {
+    justify-content: space-around; /* Evenly spaced */
+  }
+}
+
+/* Adjustments for Small Desktop Screens and Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sponsors-row {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items when wrapped */
+  }
+  .col-lg-4 {
+    flex: 0 0 33%; /* Take up one-third of the width */
+    max-width: 33%;
+  }
+}
+
+/* Adjustments for Mobile View */
+@media (max-width: 767px) {
+  .sponsors-row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .sponsor-divider {
+    display: block; /* Display the divider on mobile */
+    width: 100%; /* Width of the divider */
+    height: 2px; /* Height of the divider */
+    background-color: black; /* Color of the divider */
+    margin-bottom: 15px; /* Spacing between logos and divider */
+  }
+
+  .col-lg-4 {
+    flex: 0 0 100%; /* Take up full width on mobile */
+    max-width: 100%;
+  }
+}
+
+/* Adjustments for Extra Small Mobile Screens */
+@media (max-width: 415px) {
+  .sponsors-logo img {
+    max-width: 80%; /* Resize logos for small mobile screens */
+  }
+}
+
+
+
+/* Mentor area */
+#mentors {
+  min-height: 100vh;
+  background: #000;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.progress {
+  height: 10px;
+}
+
+.accordion .card {
+  transition: all 0.4s;
+}
+
+.accordion .card-header {
+  background-color: #fff;
+  border-radius: 0;
+  padding: 15px;
+  position: relative;
+}
+
+.accordion .card-header h5 {
+  margin-bottom: 0;
+}
+
+.accordion .card-header .btn {
+  color: #333;
+  text-decoration: none;
+}
+
+.accordion .card-header .btn.collapsed::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.accordion .card-header .btn::after {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  transition: all 0.4s;
+}
+
+.accordion .card-header .btn.collapsed::after {
+  transform: rotate(-180deg);
+}
+
+.accordion .card-body {
+  padding: 0 15px 15px;
+}
 /* Schedule Area */
 #schedules {
   background: #f3f4f3;
@@ -2791,7 +2931,7 @@ div#clock {
   }
   
   #timer{
-    font-size: 22px;
+    font-size: 20px;
     padding-right: 15px;
   }
 
@@ -2805,7 +2945,7 @@ div#clock {
 @media (max-width: 768px) {
   #count .count-wrapper {
     margin-top: 72px;
-    top: -200px;
+    top: -270px;
     z-index: 0;
     color: white;
     padding-bottom: 30px;
