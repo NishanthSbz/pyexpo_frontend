@@ -1280,7 +1280,7 @@ h1 {
 /* Adjustments for Mobile View */
 @media (max-width: 767px) {
   .sponsors-logo img {
-    max-width: 100%; /* Resize logos for small mobile screens */
+    max-width: 80%; /* Resize logos for small mobile screens */
   }
   .sponsors-row {
     flex-direction: column; /* Stack items vertically */
@@ -1304,7 +1304,7 @@ h1 {
 /* Adjustments for Extra Small Mobile Screens */
 @media (max-width: 415px) {
   .sponsors-logo img {
-    max-width: 70%; /* Resize logos for small mobile screens */
+    max-width: 60%; /* Resize logos for small mobile screens */
   }
 }
 
