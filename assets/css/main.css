@@ -1261,7 +1261,7 @@ h1 {
 /* Adjustments for Medium Desktop Screens (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   .sponsors-row {
-    justify-content: space-around; /* Evenly spaced */
+    justify-content: space-between; /* Evenly spaced */
   }
 }
 
@@ -1279,6 +1279,9 @@ h1 {
 
 /* Adjustments for Mobile View */
 @media (max-width: 767px) {
+  .sponsors-logo img {
+    max-width: 100%; /* Resize logos for small mobile screens */
+  }
   .sponsors-row {
     flex-direction: column; /* Stack items vertically */
     align-items: center;
@@ -1301,7 +1304,7 @@ h1 {
 /* Adjustments for Extra Small Mobile Screens */
 @media (max-width: 415px) {
   .sponsors-logo img {
-    max-width: 80%; /* Resize logos for small mobile screens */
+    max-width: 70%; /* Resize logos for small mobile screens */
   }
 }
 
