@@ -128,20 +128,46 @@
 }
 
 // Accordion schedule area
-const accordionItem = document.querySelectorAll('.accordion-item');
+// const accordionItem = document.querySelectorAll('.accordion-item');
                              
-const onClickAccordionHeader = e => {
-  if (e.currentTarget.parentNode.classList.contains('active')) {
-    e.currentTarget.parentNode.classList.remove("active");
+// const onClickAccordionHeader = e => {
+//   if (e.currentTarget.parentNode.classList.contains('active')) {
+//     e.currentTarget.parentNode.classList.remove("active");
+//   } else {
+//     Array.prototype.forEach.call(accordionItem, e => e.classList.remove('active'));
+//     e.currentTarget.parentNode.classList.add("active");
+//   }
+// };
+
+// const init = () => {
+//   Array.prototype.forEach.call(accordionItem, e => e.querySelector('.accordion-header').addEventListener('click', onClickAccordionHeader, false));
+// };
+
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+const onClickAccordionHeader = (e) => {
+  const parentAccordionItem = e.currentTarget.parentNode;
+
+  if (parentAccordionItem.classList.contains('active')) {
+    parentAccordionItem.classList.remove('active');
   } else {
-    Array.prototype.forEach.call(accordionItem, e => e.classList.remove('active'));
-    e.currentTarget.parentNode.classList.add("active");
+    // Remove 'active' class from all accordion items
+    accordionItems.forEach(item => item.classList.remove('active'));
+    // Add 'active' class to the clicked accordion item
+    parentAccordionItem.classList.add('active');
   }
 };
 
 const init = () => {
-  Array.prototype.forEach.call(accordionItem, e => e.querySelector('.accordion-header').addEventListener('click', onClickAccordionHeader, false));
+  // Attach event listener to each accordion header
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    header.addEventListener('click', onClickAccordionHeader);
+  });
 };
+
+// Initialize the accordion functionality
+init();
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -159,4 +185,18 @@ document.addEventListener("DOMContentLoaded", function() {
             icon.classList.remove('open');
         });
     });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const script = document.createElement('script');
+  script.src = 'https://apply.devfolio.co/v2/sdk.js';
+  script.async = true;
+  script.defer = true;
+  document.body.appendChild(script);
+  
+  // Optional: If you want to remove the script when the page unloads
+  window.addEventListener('unload', function() {
+      document.body.removeChild(script);
+  });
 });
