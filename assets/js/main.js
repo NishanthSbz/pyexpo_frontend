@@ -200,3 +200,26 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.removeChild(script);
   });
 });
+
+
+  // Handle scrolling when the user interacts with the scrollbar
+// const cardsContainer = document.querySelector('.card');
+
+// cardsContainer.addEventListener('scroll', function() {
+//   if (!this.classList.contains('hovered')) {
+//     const scrollPercentage = this.scrollLeft / (this.scrollWidth - this.clientWidth);
+//     const animationDuration = parseFloat(getComputedStyle(this).getPropertyValue('--animation-duration'));
+//     this.style.setProperty('--animation-progress', scrollPercentage * animationDuration + 's');
+//   }
+// });
+
+// cardsContainer.addEventListener('mouseenter', function() {
+//   this.classList.add('hovered');
+// });
+
+// cardsContainer.addEventListener('mouseleave', function() {
+//   this.classList.remove('hovered');
+// });
+
+
+
