@@ -1674,7 +1674,7 @@ h1 {
   margin-right: 5px;
 }
 
-.accordion .card {
+/* .accordion .card {
   border-radius: 0px;
   margin-bottom: -2px;
 }
@@ -1718,7 +1718,7 @@ h1 {
 
 .accordion .card-body {
   padding-left: 56px;
-}
+} */
 
 /* Inforamation Bar */
 #information-bar {
@@ -2781,7 +2781,7 @@ img#nav-logo {
 }
 
 #hero-area .contents {
-  padding: 160px 20px 180px;
+  padding: 431px 21px 181px;
 }
 
 #hero-area .contents .icon {
