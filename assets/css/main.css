@@ -214,7 +214,7 @@ ol li {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(255, 255, 255);
 }
 
 .btn {
@@ -1319,6 +1319,29 @@ h1 {
 }
 
 
+/* Admin Area */
+section#admin {
+  background: #000;
+}
+
+.custom-container {
+  max-width: 250px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the containers horizontally */
+}
+
+/* Flexbox layout for horizontal display */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 768px) {
+  .flex-container {
+    justify-content: space-between;
+  }
+}
 
 /* Mentor area */
 #mentors {
@@ -1328,7 +1351,7 @@ h1 {
 
 .container {
   max-width: 1400px;
-  padding: 0 15px;
+  padding: 10px 15px;
   margin: 0 auto;
 }
 
@@ -1454,10 +1477,111 @@ h2 {
 }
 
 
+.card1 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  min-width: auto;
+  padding: 20px;
+  color: var(--black);
+  background:  var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s ease;
+}
+
+.card1:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card1:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+.card1 .card1-title {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.card1 .card1-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+.card1 .card1-link-wrapper {
+  margin-top: auto;
+}
+
+.card1 .card1-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: var(--b);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.card1:hover .card1-link {
+  background: var(--darkred);
+}
+
+.card1s::-webkit-scrollbar {
+  height: 12px;
+}
+
+.card1s::-webkit-scrollbar-thumb,
+.card1s::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.card1s::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  width: 10%;
+  border: 2px solid #000;
+}
+
+.card1s::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card1 {
+    flex-basis: calc(100% - 10px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card1 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card1 {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card1:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
 
 .social-link {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border: 1px solid #ddd;
   display: flex;
   align-items: center;
@@ -1474,6 +1598,28 @@ h2 {
   text-decoration: none;
   color: #555;
 }
+
+.card1 .social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  background: #000000;
+}
+
+.card1 .social-link:hover,
+.card1 .ocial-link:focus {
+  background: #fff;
+  text-decoration: none;
+  color: #000;
+}
+
 
 .progress {
   height: 10px;
