@@ -3264,3 +3264,21 @@ li.stylish-list {
   content: '\00D7';
   /* Unicode for close symbol (×) */
 }
+.custom-container {
+  max-width: 300px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the containers horizontally */
+}
+
+/* Flexbox layout for horizontal display */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 768px) {
+  .flex-container {
+    justify-content: space-between;
+  }
+}
