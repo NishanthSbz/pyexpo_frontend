@@ -634,8 +634,8 @@ a.back-to-top:focus {
 
 .navbar-brand {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .navbar-brand img {
@@ -754,7 +754,8 @@ a.back-to-top:focus {
 
 .navbar {
   padding: 0;
-  background-color: #0000006e;
+  background-color: #000000c7;
+  height: 90px;
 }
 
 .navbar li.active a.nav-link {
@@ -1320,8 +1321,9 @@ h1 {
 
 
 /* Admin Area */
-section#admin {
+section #admin {
   background: #000;
+  padding: auto;
 }
 
 .custom-container {
@@ -1329,19 +1331,41 @@ section#admin {
   margin: 0 auto; /* Centers the containers horizontally */
 }
 
+
+.custom-container1 img {
+  border-radius: 50%; /* Make images rounded */
+}
+
 /* Flexbox layout for horizontal display */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center; /* Distribute space between elements */
+  gap: 20px; /* Even gap between elements */
+}
+
+.custom-container1 {
+  background-color: #031C2F; /* Background color */
+  padding: 15px; /* Adjust padding */
+  border-radius: 8px; /* Adjust border radius */
+  width: calc(33.33% - 30px); /* Adjust width to fit three items per row with the specified gap */
+  max-width: 250px; /* Adjust as needed */
+  margin: 0 auto;
 }
 
 /* Adjust the layout for small screens */
 @media (max-width: 768px) {
   .flex-container {
-    justify-content: space-between;
+    justify-content: center; /* Center elements */
+  }
+
+  .custom-container1 {
+    width: 100%; /* Display each container as one item per row */
+    max-width: 100%; /* Ensure containers don't exceed full width */
   }
 }
+
 
 /* Mentor area */
 #mentors {
@@ -1624,6 +1648,167 @@ h2 {
 .progress {
   height: 10px;
 }
+
+
+/* BTS Area */
+/*Profile Card 1*/
+.profile-card-1 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  height:368px;
+  border:none;
+}
+.profile-card-1 .background {
+  width:100%;
+  vertical-align: top;
+  opacity: 0.9;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+   -webkit-transform: scale(1.8);
+  transform: scale(2.8);
+}
+.profile-card-1 .card-content {
+  width: 100%;
+  padding: 15px 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.profile-card-1 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  max-width: 200px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.profile-card-1 h2 {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size:25px;
+  color: #2b72ad;
+}
+.profile-card-1 h2 small {
+  display: block;
+  font-size: 15px;
+  margin-top:10px;
+}
+.profile-card-1 i {
+  display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin:0 5px;
+    background-color:#000000;
+}
+.profile-card-1 .icon-block{
+    float:left;
+    width:100%;
+    margin-top:15px;
+}
+.profile-card-1 .icon-block a{
+    text-decoration:none;
+    border: #000;
+}
+.profile-card-1 i:hover {
+  background-color: #c0c0c0;
+  color:#2b72ad;
+  text-decoration:none;
+  
+}
+
+.profile-card-2 {
+  max-width: 300px;
+  background-color: #000000;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.profile-card-2 img {
+  transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+  position: absolute;
+  left: 20px;
+  bottom: 165px;
+  font-size: 30px;
+  color: #FFF;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #FFF;
+  transition: all linear 0.25s;
+ 
+}
+
+.profile-card-2 .profile-username {
+  position: absolute;
+  bottom: 65px;
+  left: 20px;
+  color: #FFF;
+  font-size: 13px;
+  transition: all linear 0.25s;
+}
+.profile-card-2 p{
+  color: #ffffff;
+}
+
+.profile-card-2 .profile-icons .fa {
+  margin: 5px;
+}
+
+.profile-card-2:hover img {
+  filter: grayscale(80%);
+}
+
+.profile-card-2:hover .profile-name {
+  bottom: 180px;
+  color: #2b72ad;
+}
+
+.profile-card-2:hover .profile-username {
+  bottom: 70px;
+  font-size: medium;
+}
+.profile-card-2:hover p{
+ color: #E3B35A;
+
+}
+
+.profile-card-2:hover .profile-icons {
+  left: 40px;
+  
+}
+
+
+
+
 
 /* .accordion .card {
   transition: all 0.4s;
