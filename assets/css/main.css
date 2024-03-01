@@ -1350,7 +1350,7 @@ section #admin {
   padding: 15px; /* Adjust padding */
   border-radius: 8px; /* Adjust border radius */
   width: calc(33.33% - 30px); /* Adjust width to fit three items per row with the specified gap */
-  max-width: 250px; /* Adjust as needed */
+  max-width: 350px; /* Adjust as needed */
   margin: 0 auto;
 }
 
@@ -1521,7 +1521,7 @@ h2 {
 
 .card1:hover {
   color: var(--black);
-  background: var(--white);
+  background:linear-gradient(0deg, #000 0, #000c44 100%);;
 }
 
 .card1 .card1-title {
@@ -1662,6 +1662,7 @@ h2 {
   text-align: center;
   height:318px;
   border:none;
+  background-color: linear-gradient(0deg, #000 0, #000c44 100%);
 }
 .profile-card-1 .background {
   width:100%;
@@ -1772,11 +1773,11 @@ h2 {
 
 .profile-card-2 .profile-username {
   position: absolute;
-  top: 240px;
+  top: 247px;
   left: 20px;
   bottom: 10px;
-  color: #FFF;
-  font-size: 13px;
+  color: #E3B35A;
+  font-size: 19px;
   transition: all linear 0.25s;
 }
 .profile-card-2 p{
@@ -1798,7 +1799,8 @@ h2 {
 
 .profile-card-2:hover .profile-username {
   bottom: 70px;
-  font-size: medium;
+  font-size: 21px;
+  color: #fff;
 }
 .profile-card-2:hover p{
  color: #E3B35A;
@@ -1938,11 +1940,12 @@ h2 {
   font-weight: 500;
   letter-spacing: 0.025em;
   margin: 0;
+  text-align: center;
 }
 .accordion-header h2:before, .accordion-header h2:after {
   content: "";
   position: absolute;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   transition: background-color 0.2s ease-in 0s, transform 0.2s ease 0s;
 }
 .accordion-header h2:before {
@@ -1957,6 +1960,7 @@ h2 {
   right: 4px;
   top: calc(50% - 5px);
   transform: none;
+  
 }
 .accordion-body {
   max-height: 0;
