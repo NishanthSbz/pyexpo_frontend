@@ -223,6 +223,12 @@
       min-width: 5rem;
       padding: 18px 20px;
     }
+    #prizes .event-item:hover .content {
+      display: none;
+    }
+    #prizes .event-item .overlay-text:hover {
+      opacity: 0;
+    }
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
