@@ -1253,7 +1253,7 @@ h1 {
 }
 .sponsors-row {
   display: flex;
-  justify-content: space-between; /* Evenly spaced */
+  justify-content: center; /* Evenly spaced */
   align-items: center;
 }
 
@@ -1262,7 +1262,7 @@ h1 {
 }
 
 .sponsors-logo img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
