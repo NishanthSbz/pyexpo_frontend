@@ -99,38 +99,67 @@
 
 }(jQuery));
 
+// // Set the date to count down to (format: month day, year, hour:minute:second)
+// var countDownDate = new Date('Mar 4, 2024 00:08:00').getTime()
+
+// // Update the timer every second
+// var x = setInterval(function () {
+//   // Get the current date and time
+//   var now = new Date().getTime()
+
+//   // Calculate the time remaining
+//   var distance = countDownDate - now
+
+//   // Calculate days, hours, minutes, and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+//   // Display the timer in the #timer div
+//   document.getElementById('timer').innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'mins ' + seconds + 'sec '
+
+//   // If the countdown is over, display a message
+//   if (distance < 0) {
+//     clearInterval(x)
+//     document.getElementById('timer').innerHTML = "Get ready to unleash your coding skills in PyExpo'24!"
+//   }
+// }, 1000)
+
+// function scroll() {
+//   var phase = document.getElementsByClassName('tab-content');
+//   phase.scrollIntoView();
+
+// }
+
 // Set the date to count down to (format: month day, year, hour:minute:second)
-var countDownDate = new Date('Mar 6, 2024 00:00:00').getTime()
+var countDownDate = new Date('Mar 6, 2024 00:00:00').getTime();
 
 // Update the timer every second
 var x = setInterval(function () {
   // Get the current date and time
-  var now = new Date().getTime()
+  var now = new Date().getTime();
 
   // Calculate the time remaining
-  var distance = countDownDate - now
+  var distance = countDownDate - now;
 
   // Calculate days, hours, minutes, and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the timer in the #timer div
-  document.getElementById('timer').innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'mins ' + seconds + 'sec '
-
-  // If the countdown is over, display a message
-  if (distance < 0) {
-    clearInterval(x)
-    document.getElementById('timer').innerHTML = 'EXPIRED'
+  var timerElement = document.getElementById('timer');
+  if (distance >= 0) {
+    timerElement.innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'mins ' + seconds + 'sec ';
+  } else {
+    clearInterval(x);
+    timerElement.innerHTML = "Get ready to unleash your coding skills in PyExpo'24!";
+    timerElement.style.fontSize = '30px'; // Adjust font size for the message
   }
-}, 1000)
 
-function scroll() {
-  var phase = document.getElementsByClassName('tab-content');
-  phase.scrollIntoView();
-
-}
+}, 1000);
 
 // Accordion schedule area
 // const accordionItem = document.querySelectorAll('.accordion-item');
