@@ -1188,16 +1188,16 @@ h1 {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .ready-to-play video {
+  .ready-to-play {
+    min-height: 200px; /* Set a minimum height for the container */
     height: auto; /* Allow the container to adjust its height based on the video */
   }
 
-  video {
-    width: 80%; /* Adjust width for mobile view */
-    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  .ready-to-play video {
+    width: 100%; /* Ensure the video fills the container */
+    height: auto; /* Allow the video to adjust its height based on the width */
   }
 }
-
 
 .counter-section .counter .icon i {
   color: #fff !important;

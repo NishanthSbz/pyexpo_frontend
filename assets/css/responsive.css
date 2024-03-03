@@ -229,6 +229,9 @@
     #prizes .event-item .overlay-text:hover {
       opacity: 0;
     }
+    #information-bar .inforation-wrapper{
+      margin-top: 5px;
+    }
   }
   
   @media (min-width: 320px) and (max-width: 480px) {

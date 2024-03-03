@@ -310,17 +310,18 @@
 
   <!-- Video Section Start -->
   <div class="ready-to-play">
-    <video id="bgvid" class="stop" loop>
+    <video id="bgvid" class="stop" loop autoplay muted playsinline>
       <source src="assets/video/Pyexpo24.mp4" type="video/mp4">
     </video>
     <div id="polina" class="video-text">
       <div class="tb-t">
         <div class="tb-c">
-          <div class="polina"><button><i class='lni-play'></i></button></div>
+          <div class="polina"><button id="playButton"><i class='lni-play'></i></button></div>
         </div>
       </div>
     </div>
   </div>
+  
   <!-- Video Section End -->
 
   <!-- Information Bar Start -->
@@ -3002,6 +3003,7 @@
   <script src="assets/js/main.js"></script>
   <!-- script for devfolio -->
   <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+  
 </body>
 
 </html>
