@@ -9,7 +9,7 @@
     // $('#preloader').fadeOut();
     setTimeout(function () {
       $('#preloader').fadeOut();
-    }, 2000); // 10 seconds timeou
+    }, 1000); // 1 seconds timeout
 
     // Sticky Nav
     $(window).on('scroll', function () {
