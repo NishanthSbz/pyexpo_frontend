@@ -11,6 +11,8 @@
       $('#preloader').fadeOut();
     }, 1000); // 1 seconds timeout
 
+
+    
     // Sticky Nav
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 100) {
@@ -226,36 +228,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-$(document).ready(function () {
-  var video = document.getElementById('bgvid');
-  var playButton = document.getElementById('playButton');
+(function($) {
+  "use strict";  
 
-  // Function to play video when section is in view
-  function playVideo() {
-    if (isElementInViewport($('.ready-to-play'))) {
-      video.play();
-      playButton.style.display = 'none';
+  $(window).on('load', function() {
+    var video = document.getElementById('bgvid');
+
+    // Function to play video when section is in view
+    function playVideo() {
+      var videoContainer = $('.ready-to-play');
+      var videoPosition = videoContainer.offset().top;
+      var windowPosition = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      if (videoPosition < windowPosition + windowHeight && videoPosition + videoContainer.height() > windowPosition) {
+        if (video.paused) {
+          video.play();
+        }
+      } else {
+        video.pause();
+      }
     }
-  }
 
-  // Function to check if an element is in the viewport
-  function isElementInViewport(el) {
-    var rect = el[0].getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+    // Play video when scrolled into view
+    $(window).on('scroll', function() {
+      playVideo();
+    });
 
-  // Play video when scrolled into view
-  $(window).on('scroll', function () {
+    // Play video when loaded and in view
     playVideo();
+
+    // Handle video pause event
+    video.addEventListener('pause', function() {
+      setTimeout(function() {
+        video.play();
+      }, 100); // Adjust delay as needed
+    });
+
+    // Prevent video from being paused by user interaction
+    video.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+      }
+    });
+
+    // Prevent context menu on video
+    video.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+    });
   });
-
-  // Play video when loaded and in view
-  playVideo();
-});
-
+})(jQuery);
 
