@@ -9,7 +9,7 @@
     // $('#preloader').fadeOut();
     setTimeout(function () {
       $('#preloader').fadeOut();
-    }, 1000); // 1 seconds timeout
+    }, 500); // 0.5 seconds timeout
 
 
     
