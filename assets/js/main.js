@@ -133,7 +133,7 @@
 // }
 
 // Set the date to count down to (format: month day, year, hour:minute:second)
-var countDownDate = new Date('Mar 6, 2024 11:01:00').getTime();
+var countDownDate = new Date('Mar 6, 2024 00:00:00').getTime();
 
 // Update the timer every second
 var x = setInterval(function () {
