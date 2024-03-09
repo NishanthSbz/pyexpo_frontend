@@ -958,7 +958,8 @@ a.back-to-top:focus {
 
 
 .discord-button {
-  background-color: #5170df; /* Discord purple color */
+  background-color: #5170df;
+   /* Discord purple color */
 }
 
 @media screen and (max-width: 768px) {
@@ -968,7 +969,7 @@ a.back-to-top:focus {
   }
 
    .discord-button {
-      width: 80%; /* make buttons full width on smaller screens */
+      width: 0%; /* make buttons full width on smaller screens */
       margin-bottom: 10px; /* add some space between buttons */
   }
 }
