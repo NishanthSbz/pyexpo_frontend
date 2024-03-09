@@ -926,6 +926,56 @@ a.back-to-top:focus {
   }
 }
 
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  max-width: 700px; /* adjust the maximum width as needed */
+  margin: 30px auto;
+  gap: 20px;
+}
+
+.apply-button, .discord-button {
+  height: 44px;
+  width: 150px; /* adjust button width as needed */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.discord-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px; /* adjust spacing between icon and text */
+}
+
+/* Rest of the CSS remains the same */
+
+
+.discord-button {
+  background-color: #7289DA; /* Discord purple color */
+}
+
+@media screen and (max-width: 768px) {
+  .button-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .apply-button, .discord-button {
+      width: 100%; /* make buttons full width on smaller screens */
+      margin-bottom: 10px; /* add some space between buttons */
+  }
+}
+
+
+
+/* about area styles */
 #about {
   background: #f6f9f9;
 }
@@ -3406,6 +3456,7 @@ footer {
   color: #fff;
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 #hero-area .overlay {
