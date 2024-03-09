@@ -967,8 +967,8 @@ a.back-to-top:focus {
       align-items: center;
   }
 
-  .apply-button, .discord-button {
-      width: 100%; /* make buttons full width on smaller screens */
+   .discord-button {
+      width: 80%; /* make buttons full width on smaller screens */
       margin-bottom: 10px; /* add some space between buttons */
   }
 }
