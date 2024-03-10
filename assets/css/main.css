@@ -962,6 +962,11 @@ a.back-to-top:focus {
    /* Discord purple color */
 }
 
+.discord-button:hover {
+  color: #000000;
+   /* Discord purple color */
+}
+
 @media screen and (max-width: 768px) {
   .button-container {
       flex-direction: column;
