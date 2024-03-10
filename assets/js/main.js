@@ -155,7 +155,7 @@ var x = setInterval(function () {
     timerElement.innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'mins ' + seconds + 'sec ';
   } else {
     clearInterval(x);
-    timerElement.innerHTML = "Get ready to unleash your coding skills in PyExpo'24!";
+    timerElement.innerHTML = "Get ready to unleash your coding skills in HACK2EXPO !";      //Unleash your coding skills in the next 30hrs of Hack2Expo !
     timerElement.style.fontSize = '30px'; // Adjust font size for the message
   }
 
