@@ -133,7 +133,7 @@
 // }
 
 // Set the date to count down to (format: month day, year, hour:minute:second)
-var countDownDate = new Date('Mar 6, 2024 00:00:00').getTime();
+var countDownDate = new Date('Mar 14, 2024 16:00:00').getTime();
 
 // Update the timer every second
 var x = setInterval(function () {
@@ -144,15 +144,15 @@ var x = setInterval(function () {
   var distance = countDownDate - now;
 
   // Calculate days, hours, minutes, and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+ 
+  var hours = Math.floor((distance % (1000 * 60* 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the timer in the #timer div
   var timerElement = document.getElementById('timer');
   if (distance >= 0) {
-    timerElement.innerHTML = days + 'days ' + hours + 'hours ' + minutes + 'mins ' + seconds + 'sec ';
+    timerElement.innerHTML =  hours + 'hours ' + minutes + 'mins ' + seconds + 'sec ';
   } else {
     clearInterval(x);
     timerElement.innerHTML = "Get ready to unleash your coding skills in HACK2EXPO !";      //Unleash your coding skills in the next 30hrs of Hack2Expo !
